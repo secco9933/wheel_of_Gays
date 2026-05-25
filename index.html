@@ -238,7 +238,7 @@ const PALETTE=['#ff3b30','#1e90ff','#34c759','#ffcc00','#af52de','#ff9500',
 /* ---------- Stato ---------- */
 let roster = JSON.parse(Store.get('rdn_roster')||'null');
 if(!Array.isArray(roster)){
-  roster = ['Marco','Luca','Giulia','Sara','Andrea','Elena'].map((n,i)=>({name:n,color:PALETTE[i%PALETTE.length]}));
+  roster = [];   // alla prima apertura la rubrica è vuota: aggiungi i tuoi amici
 }
 // normalizza i colori sulla palette accesa stile Crazy Time
 roster.forEach((p,i)=>{ p.color=PALETTE[i%PALETTE.length]; });
